@@ -2,9 +2,16 @@
 Simple game launcher for Escape From Tarkov 0.12.xxxx.
 
 ## Requirements
-- Visual Studio 2017
+- Visual Studio 2017 (with C# desktop workload)
 - .NET Framework 2.0
 - Escape From Tarkov 0.12.xxxx
+
+## Build & testing
+1. Open the project in VS2017
+2. Change build mode to Release
+3. Build -> Build Solution
+4. Copy-paste <projectdir>\bin\Release\GameLauncher.exe <br/>
+   to Escape From Tarkov's root directory
 
 ## Installation
 1. Download the latest release
