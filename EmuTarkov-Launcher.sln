@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.902
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFT-SimpleLauncher", "EFT-SimpleLauncher\EFT-SimpleLauncher.csproj", "{E60D9E4A-3D22-4B8E-B2DE-B3B4E02547B7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmuTarkov-Launcher", "EmuTarkov-Launcher\EmuTarkov-Launcher.csproj", "{4AF372E6-FAC5-4D96-B833-7A26B43C037B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{E60D9E4A-3D22-4B8E-B2DE-B3B4E02547B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E60D9E4A-3D22-4B8E-B2DE-B3B4E02547B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E60D9E4A-3D22-4B8E-B2DE-B3B4E02547B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E60D9E4A-3D22-4B8E-B2DE-B3B4E02547B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4AF372E6-FAC5-4D96-B833-7A26B43C037B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4AF372E6-FAC5-4D96-B833-7A26B43C037B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4AF372E6-FAC5-4D96-B833-7A26B43C037B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4AF372E6-FAC5-4D96-B833-7A26B43C037B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {C482E96B-DCE4-41B3-9E41-072742FE59DE}
+		SolutionGuid = {194D3E2A-BAC3-4604-9A83-44EB594455F6}
 	EndGlobalSection
 EndGlobal

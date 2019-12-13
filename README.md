@@ -10,13 +10,13 @@ Simple game launcher for Escape From Tarkov 0.12.xxxx.
 1. Open the project in VS2017
 2. Change build mode to Release
 3. Build -> Build Solution
-4. Copy-paste <projectdir>\bin\Release\GameLauncher.exe <br/>
+4. Copy-paste <projectdir>\bin\Release\EmuTarkov-Launcher.exe <br/>
    to Escape From Tarkov's root directory
 
 ## Installation
 1. Download the latest release
-2. Copy-paste "GameLauncher.exe" to Escape From Tarkov's directory
+2. Copy-paste "EmuTarkov-Launcher.exe" to Escape From Tarkov's directory
 
 ## Usage
 1. Start the server emulator
-2. Run GameLauncher.exe
+2. Run EmuTarkov-Launcher.exe
