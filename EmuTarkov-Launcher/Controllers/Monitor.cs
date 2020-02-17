@@ -10,9 +10,9 @@ namespace EmuTarkov_Launcher
 		private string processName;
 		private Action<Monitor> callback;
 
-		public Monitor(string processName, double interval, Action<Monitor> callback)
+		public Monitor(string processName, Action<Monitor> callback)
 		{
-			monitor = new System.Timers.Timer(interval);
+			monitor = new System.Timers.Timer(1000);
 			monitor.Elapsed += OnPollEvent;
 			monitor.AutoReset = true;
 
