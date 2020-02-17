@@ -12,7 +12,7 @@ namespace EmuTarkov_Launcher
 
 		public LauncherConfig()
 		{
-			Email = "user@jet.com";
+			Email = "user0@jet.com";
 			Password = "password";
 			GamePath = Environment.CurrentDirectory;
 			BackendUrl = "https://127.0.0.1";

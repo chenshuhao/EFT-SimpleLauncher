@@ -28,7 +28,7 @@ namespace EmuTarkov_Launcher
 			UrlInput.Text = Globals.LauncherConfig.BackendUrl;
 
 			// setup monitor
-			monitor = new Monitor("EscapeFromTarkov", MonitorCallback);
+			monitor = new Monitor("EscapeFromTarkov", 1000, MonitorCallback);
 		}
 
 		private void MonitorCallback(Monitor monitor)
@@ -70,22 +70,12 @@ namespace EmuTarkov_Launcher
 				return;
 			}
 
-			// get profile ID
-			string token = GenerateToken(Globals.LauncherConfig.Email, Globals.LauncherConfig.Password);
-			string playerId = LauncherRequest.Send(UrlInput.Text + "/launcher/profile/login", token);
-
-			if (playerId == "0")
-			{
-				MessageBox.Show("Wrong email and/or password");
-				return;
-			}
-
 			// set backend url
 			Globals.ClientConfig.BackendUrl = Globals.LauncherConfig.BackendUrl;
 			Json.Save<ClientConfig>(Globals.ClientConfigFile, Globals.ClientConfig);
 
 			ProcessStartInfo clientProcess = new ProcessStartInfo(Globals.ClientExecutable);
-			clientProcess.Arguments = "-bC5vLmcuaS5u=" + token + " -token=" + playerId + " -screenmode=fullscreen";
+			clientProcess.Arguments = GenerateToken(Globals.LauncherConfig.Email, Globals.LauncherConfig.Password) + " -screenmode=fullscreen";
 			clientProcess.UseShellExecute = false;
 			clientProcess.WorkingDirectory = Environment.CurrentDirectory;
 
@@ -102,11 +92,17 @@ namespace EmuTarkov_Launcher
 		private string GenerateToken(string email, string password)
 		{
 			LoginToken token = new LoginToken(email, password);
+			string beginKey = "-bC5vLmcuaS5u=";
+			string endKey = "= -token=0";
+
+			// serialize login token
 			string serialized = Json.Serialize(token);
+
+			// encode login token to base64
 			string result = Convert.ToBase64String(Encoding.UTF8.GetBytes(serialized));
 
 			// add begin and end part of the token
-			return result + "=";
+			return beginKey + result + endKey;
 		}
 
 		private void TrayIcon_MouseDoubleClick(object sender, MouseEventArgs e)

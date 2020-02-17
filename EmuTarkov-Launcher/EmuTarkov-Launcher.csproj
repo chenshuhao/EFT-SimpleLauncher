@@ -49,7 +49,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controllers\LauncherRequest.cs" />
     <Compile Include="Controllers\Monitor.cs" />
     <Compile Include="Models\ClientConfig.cs" />
     <Compile Include="Controllers\Globals.cs" />
